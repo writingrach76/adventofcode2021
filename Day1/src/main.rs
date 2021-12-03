@@ -12,7 +12,8 @@ fn main() {
 }
 
 /*
-* 
+* Compare two numbers and increment if second is bigger than the first
+* returns number of increases 
 */
 fn findIncreases(filename:String) -> i32 {
     let file = File::open(filename).ok().unwrap();
@@ -45,6 +46,7 @@ fn findIncreasesByGroup(filename:String) -> i32 {
     let mut first_total :i32 = -1;
     let mut second_total:i32 = -1;
     let mut q = Queue::new();
+    q.set_capacity(3); // comparing sums in groups of 3
     let mut index = 0;
         for line in lines {
             let goodline = line.unwrap();
