@@ -35,12 +35,11 @@ fn parse_bingo_file(filename:&str) -> ( Vec<i32>, Vec<[[i32;5];5]>){
                     }
                     board_row+=1;
                 }
-                //parse boards
             }
             if board_row > 4 {
                 board_row = 0;
                 boards.push(temp_board);
-                temp_board = [[0;5];5]; //[i32; 3] = [0; 3];
+                temp_board = [[0;5];5];
             }
         }
     }
